@@ -50,12 +50,14 @@
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dwW-MR-Fez">
                                                 <rect key="frame" x="132" y="136" width="150" height="55"/>
-                                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="55" id="EwZ-Ou-aqe"/>
                                                     <constraint firstAttribute="width" constant="150" id="l6j-T2-pYM"/>
                                                 </constraints>
-                                                <state key="normal" title="Start Trip"/>
+                                                <state key="normal" title="Start Trip">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
                                                 <connections>
                                                     <action selector="startAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dnh-Rr-liL"/>
                                                 </connections>
