@@ -20,32 +20,36 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <subviews>
                                     <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tkE-DN-CLK">
-                                        <rect key="frame" x="0.0" y="601" width="414" height="180"/>
+                                        <rect key="frame" x="0.0" y="571" width="414" height="200"/>
                                         <subviews>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Add your location" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NBX-rX-xCv">
-                                                <rect key="frame" x="16" y="8" width="382" height="45"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N21-t7-E0O">
+                                                <rect key="frame" x="16" y="8" width="382" height="55"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="45" id="sTR-iM-66O"/>
+                                                    <constraint firstAttribute="height" constant="55" id="Ory-hk-CnI"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <state key="normal" title=" Add your location">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
                                                 <connections>
-                                                    <outlet property="delegate" destination="BYZ-38-t0r" id="fqx-6A-iTO"/>
+                                                    <action selector="startLocationAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZDi-Bf-bjk"/>
                                                 </connections>
-                                            </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Add your destination Location" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ocB-20-vpA">
-                                                <rect key="frame" x="16" y="69" width="382" height="45"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1S4-WX-LTk">
+                                                <rect key="frame" x="16" y="71" width="382" height="55"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="45" id="Qz5-vD-7mX"/>
+                                                    <constraint firstAttribute="height" constant="55" id="iCm-TF-ayM"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <state key="normal" title=" Add your destination Location">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
                                                 <connections>
-                                                    <outlet property="delegate" destination="BYZ-38-t0r" id="5I7-mH-S86"/>
+                                                    <action selector="endLocationAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4Nu-Ra-Enb"/>
                                                 </connections>
-                                            </textField>
+                                            </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dwW-MR-Fez">
-                                                <rect key="frame" x="132" y="126" width="150" height="55"/>
+                                                <rect key="frame" x="132" y="136" width="150" height="55"/>
                                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="55" id="EwZ-Ou-aqe"/>
@@ -59,15 +63,15 @@
                                         </subviews>
                                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstItem="NBX-rX-xCv" firstAttribute="top" secondItem="tkE-DN-CLK" secondAttribute="top" constant="8" id="1in-5e-qMu"/>
-                                            <constraint firstItem="dwW-MR-Fez" firstAttribute="top" secondItem="ocB-20-vpA" secondAttribute="bottom" constant="12" id="Bea-Uz-MYQ"/>
-                                            <constraint firstItem="ocB-20-vpA" firstAttribute="top" secondItem="NBX-rX-xCv" secondAttribute="bottom" constant="16" id="HAF-eT-NRy"/>
+                                            <constraint firstItem="N21-t7-E0O" firstAttribute="leading" secondItem="tkE-DN-CLK" secondAttribute="leading" constant="16" id="Cd0-2W-b7K"/>
+                                            <constraint firstItem="1S4-WX-LTk" firstAttribute="trailing" secondItem="N21-t7-E0O" secondAttribute="trailing" id="Gv4-8U-Jz9"/>
                                             <constraint firstItem="dwW-MR-Fez" firstAttribute="centerX" secondItem="tkE-DN-CLK" secondAttribute="centerX" id="JB3-lF-csu"/>
-                                            <constraint firstAttribute="height" constant="180" id="MqU-dQ-sNZ"/>
-                                            <constraint firstItem="ocB-20-vpA" firstAttribute="trailing" secondItem="NBX-rX-xCv" secondAttribute="trailing" id="SpB-0P-9gp"/>
-                                            <constraint firstItem="NBX-rX-xCv" firstAttribute="leading" secondItem="tkE-DN-CLK" secondAttribute="leading" constant="16" id="fkH-7w-iJw"/>
-                                            <constraint firstItem="ocB-20-vpA" firstAttribute="leading" secondItem="NBX-rX-xCv" secondAttribute="leading" id="hCt-tV-hoJ"/>
-                                            <constraint firstAttribute="trailing" secondItem="NBX-rX-xCv" secondAttribute="trailing" constant="16" id="is2-LQ-jNQ"/>
+                                            <constraint firstItem="1S4-WX-LTk" firstAttribute="top" secondItem="N21-t7-E0O" secondAttribute="bottom" constant="8" id="LBS-Er-2wb"/>
+                                            <constraint firstAttribute="height" constant="200" id="MqU-dQ-sNZ"/>
+                                            <constraint firstItem="dwW-MR-Fez" firstAttribute="top" secondItem="1S4-WX-LTk" secondAttribute="bottom" constant="10" id="OR7-l5-bh0"/>
+                                            <constraint firstItem="1S4-WX-LTk" firstAttribute="leading" secondItem="N21-t7-E0O" secondAttribute="leading" id="XiL-zi-13M"/>
+                                            <constraint firstAttribute="trailing" secondItem="N21-t7-E0O" secondAttribute="trailing" constant="16" id="dOE-c1-cFf"/>
+                                            <constraint firstItem="N21-t7-E0O" firstAttribute="top" secondItem="tkE-DN-CLK" secondAttribute="top" constant="8" id="rW4-3e-Jm2"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -75,7 +79,7 @@
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="tkE-DN-CLK" secondAttribute="trailing" id="0E1-ep-SEz"/>
                                     <constraint firstItem="tkE-DN-CLK" firstAttribute="leading" secondItem="TFA-cv-vdQ" secondAttribute="leading" id="npy-UN-quG"/>
-                                    <constraint firstAttribute="bottom" secondItem="tkE-DN-CLK" secondAttribute="bottom" constant="115" id="tq1-7d-ZmQ"/>
+                                    <constraint firstAttribute="bottom" secondItem="tkE-DN-CLK" secondAttribute="bottom" constant="125" id="tq1-7d-ZmQ"/>
                                 </constraints>
                                 <connections>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="ofM-xC-kDJ"/>
@@ -99,10 +103,10 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="endLocation" destination="ocB-20-vpA" id="FLK-QZ-qdv"/>
+                        <outlet property="endLocation" destination="1S4-WX-LTk" id="23z-kO-aaA"/>
                         <outlet property="location" destination="tkE-DN-CLK" id="iJx-fe-T7P"/>
                         <outlet property="mapView" destination="TFA-cv-vdQ" id="7Mq-cT-wjQ"/>
-                        <outlet property="startLocation" destination="NBX-rX-xCv" id="SNI-y7-JwY"/>
+                        <outlet property="startLocation" destination="N21-t7-E0O" id="e1c-Ws-uya"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
